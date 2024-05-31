@@ -6,14 +6,11 @@ package com.example;
  */
 public class App 
 {
-	private static int SIZE;
-	
-	private static double calcularSalarioPromedio;
-	
+
     public static void main( String[] args )
     {
-    	if(args.length != 0)
-    		SIZE = Integer.parseInt(args[0]);
+    	if(args.length != 0);
+    		
     	
         //Para crear un array de Persona.
     	//Esta primera variante, crea un Array Inmutable, es decir,
@@ -96,6 +93,17 @@ public class App
     	 * Recorrer el array de personas y recuperar el salario promedio
     	 * de todas las personas ( variable double sumar el salario total)	*/
       	
+      double sumatoriaDeLosSalarios = 0.0;
+      int totalDePersonas = personas.length;
+      double salarioPromedio = 0.0;
+      
+      for(Persona persona : personas) {
+    	 // sumatoriaDeLosSalarios  = sumatoriaDeLosSalarios + persona.getSalario();
+    	  sumatoriaDeLosSalarios += persona.getSalario();
+      }
+      salarioPromedio = sumatoriaDeLosSalarios / totalDePersonas;
+      System.out.println("El salario promedio de todas las personas es: " + salarioPromedio);
+      
       
         }
       
